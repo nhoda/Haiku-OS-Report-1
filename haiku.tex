@@ -1,5 +1,5 @@
 \title{\textbf{Haiku}\\OS Report Part I}
-\author{COMP 3000\\ \\Troy Hildebrandt -- 100xxxxxx\\Nima Hoda -- 100308135}
+\author{COMP 3000\\ \\Troy Hildebrandt -- 100622385\\Nima Hoda -- 100308135}
 \date{\today}
 
 \documentclass{article}
@@ -170,7 +170,7 @@ uncompressed size \cite{HaikuR1A3Src}.  The Haiku system sources
 contain about 5.5 million lines of C and C++ code and headers, not
 including blank or comment lines, as reported by CLOC \cite{Cloc}.
 
-\section{Installation and Startup}
+\section{Installation Procedure}
 
 See figure \ref{fig:foo}.
 
@@ -181,13 +181,118 @@ See figure \ref{fig:foo}.
 \label{fig:foo}
 \end{figure}
 
+For the purposes of testing, installation was performed on an Oracle 
+VirtualBox setup, in this specific case using Windows 7 64bit host as
+a host OS. The OS was set to Other/Unknown, and 512MB of memory was 
+allotted for Haiku to use. The default values of 2GB for boot disk size,
+and another 2GB for Haiku’s usable partition was selected as the starting 
+amount, with “Dynamically expanding storage” selected just in case.
+
+Installation began by selecting the Haiku disc ISO to be used for 
+the secondary IDE device in the Storage Settings for my Haiku guest, and 
+a first boot was initiated. <insert install1.png> After a simple language 
+select, a quick and painless format of my 2GB partition to the Be File 
+system, my partition was ready to be selected from a drop down list and 
+the install could begin. This process could simply not have been more 
+painless, and there were absolutely no surprises or hurdles to overcome 
+during the process. <insert install2.png> After the progress bar reached 
+the end, I chose the “Quit”option and the system rebooted to  be used 
+for the first time.
+
+\section{Startup}
+
+The first start-up presents the user with a screen showing the Haiku logo, 
+and a series of logos that go from monochrome to full color in sequence 
+to indicate progress during boot-up.  <Insert startup1.png> Given this 
+execution combined with the artistic styling of the logos, this is very 
+reminiscent of Maxis’ The Sims series of games.
+ 
+After what is a noticeably rapid boot process, users familiar with Haiku’s 
+inspiration and spiritual predecessor, BeOS, will be instantly greeted with 
+both familiar desktop and icon styling along with the Tracker, one of very 
+few things that made a direct translation from BeOS to Haiku as part of 
+being open-sourced in 2001.\cite{HaikuFaq}
+
+There is also a very profound lack of any further setup involved, and Haiku is, 
+for all intents and purposes, ready for use. The time taken from start to finish 
+in setting up an installation of Haiku under VirtualBox is roughly five minutes.
+
 \section{Basic Operation}
 
-WERDS.
+Haiku comes pre-installed with a host of applications that the average user may 
+use, the most important of which is likely its pre-installed browser, titled 
+WebPositive. Haiku is aimed at “personal computing”, and given this vague 
+definition, seems to fulfill the needs of an average light user “out of the 
+box.” The web browser will be the obvious first stop for most users looking 
+to get more software and make their Haiku experience a more productive one.
+	
+This is where the first very minor problem was encountered, and it 
+was a network related issue. Haiku refused to recognize the default network 
+card that VirtualBox had chosen to virtualize, and so a quick shutdown and 
+modification of this setting to a card that Haiku recognizes solved the problem 
+immediately.
+	
+A user looking to expand their selection of installed software will 
+likely end up at the site Haikuware. (www.haikuware.com) Considering my astounding 
+disinterest in word-processing or productivity programs, I decided to hunt 
+down a Haiku-compatible version of a classic favourite of mine, id Software’s 
+Quake II. <insert using1.jpg> Interestingly enough, the claim from the 
+download page at Haikuware for Quake II claims it is the same version that 
+used to be found on BeDepot.
+	
+Following my download's completion, I noticed it was of the file format .
+pkg. A double click revealed a very simple auto-install package that I allowed 
+to install to its default directory, /boot/apps. The file system in BeOS/Haiku 
+is very similar to that of a Unix OS, despite Haiku not being a Unix based 
+operating system. Haiku also comes with a Bash terminal, with the usual commands 
+like ls, chmod, pwd, and many others. <insert using2.png> The mounting of a 
+CD is automatic, and very easily accessible once inserted, either from a link 
+on the desktop, or from the root directory, based on what the name of the CD 
+is. In this case, I could access the files on the Quake II CD from /Quake2, 
+and the files from the installation of BeOS Quake II at /boot/apps/Quake2.
+	
+After copying the contents of a full Windows installation of Quake 
+II into Haiku via USB drive (which again was instantly recognized and mounted), 
+I started it up. The first noticeable problems were both the obviously broken 
+and ear-piercing sound which caused me to mute my PC, and the excruciatingly 
+slow Mesa software OpenGL implementation that the game defaulted to. This is 
+a result of no Guest Additions and no virtualized OpenGL 3D-acceleration, 
+and as a result, I switched to pure software rendering mode which ended up 
+working out nicely. <insert using3.png> However, attempting to start a game 
+causes a crash, and while playing the beginning demo the game will occasionally 
+crash as well. I’m not sure if this is a result of it being a BeOS executable, 
+the fact that I’m running it in VirtualBox, or just that the BeOS/Haiku executable 
+of Quake II isn’t quite ready for prime time yet. I was nevertheless still impressed 
+to see it running in any capacity in Haiku.
+	
+Most people will at some point want to watch a video on Youtube, or at 
+least some Flash-based video website. If Haiku was going to be of any use to the 
+average personal computer user, I was going to need to determine whether or not 
+Youtube was a viable option in Haiku. I set about trying to download a new browser 
+from Haikuware to spruce up my browsing experience, and to answer the question 
+“how simple is the installation of new software like a web browser?”  I soon 
+discovered the answer is “not very.”
+
+There is a small selection of browsers available for Haiku directly from Haikuware, 
+but they’re mostly old versions of browsers (i.e. Firefox 2.0 since FF3 still isn’t 
+fully ported, and older versions of Opera) that still don’t have proper plugin 
+support for things like Flash. Since Flash is closed-course, open-source versions 
+of it like Gnash are made, but are still largely unsupported and not optimal. 
+This makes something like watching Youtube a more massive undertaking than most 
+basic users will be capable of, since getting Flash support in a web browser in 
+Haiku is a task in itself.  This speaks poorly to Haiku’s goal to be for “personal computing”, 
+considering how many more popular operating systems provide this basic functionality.
 
 \section{Usage Evaluation}
 
-MOAR WERDS.
+While a seemingly faithful recreation of the original BeOS and an impressive piece of work in 
+its own right, Haiku falls short of its goals to be for “personal computing” by simply not 
+having enough software support and lacking in the excellent package distribution models 
+that many other more popular operating systems provide. An interesting OS, and considering 
+it’s open source model could technically be made to do anything if you felt so inclined, 
+but the types of users who would delve into source code to coax Haiku into being more 
+useful aren’t the sort of people I feel the Haiku developers are speaking to when they 
+describe it vaguely as being for “personal computing.”
 
 \bibliography{haiku}{}
 \bibliographystyle{plain}
