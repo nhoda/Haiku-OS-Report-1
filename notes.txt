@@ -30,13 +30,14 @@ Background:
       (HaikuIcon)
 **** technologies
 ***** object oriented C++ beos api (HaikuWiki)
+***** OpenBFS (BFSWiki)
 
 * its goals and target audience
 ** targets personal computing (HaikuAbout)
 *** with a fully integrated GUI environment as a opposed to a stacked
     system (HaikuFaq)
 *** focused on single user at the moment, though with plans for
-    multi-user support in the future ()
+    multi-user support in the future (HaikuFuture)
 *** unified human interface (HaikuHIG) (HaikuIcon)
 ** development is focused on x86-32 hardware platform, though ports to
    other platforms are being developed (HaikuFaq)
@@ -63,7 +64,7 @@ Background:
 *** google summer of code
 **** Haiku project has participated in GSOC every year since 2007
      (HaikuGSOC)
-**** took contributions from seven students in 2010
+**** took contributions from seven students in 2010 (HaikuGSOC2010)
 *** development contracts (HaikuIncContracts)
 **** allow contributors to focus large blocks of time to Haiku
      development (HaikuIncContracts)
@@ -81,7 +82,7 @@ Background:
 ****** directly to Haiku, Inc. (HaikuIncDonors)
 ****** through haikuware bounties and thank you awards (HaikuWareBounties)
 ******* haikuware is a repository of pre-built software for Haiku as
-        well as a hub for Haiku end-users
+        well as a hub for Haiku end-users (HaikuWareAbout)
 
 * how it may be obtained
 ** haiku release 1 alpha 3 published june 20, 2011 (HaikuRelease)
@@ -95,6 +96,7 @@ Background:
       by VMWare products as well as QEMU, and VirtualBox (VMDKWiki)
 *** available for order on CD from Haiku, Inc. for a minimum donation
     of $10 per disc (HaikuOrder)
+*** nightly snapshots available from ...
 
 * its approximate size
 ** r1alpha3 release images

@@ -1,23 +1,178 @@
-\title{Haiku Yadda Yadda}
-\author{Troy Hildebrandt and Nima Hoda}
+\title{Haiku\\OS Report Part I}
+\author{Troy Hildebrandt -- 100xxxxxx\\Nima Hoda -- 100308135\\ \\COMP 3000}
 \date{\today}
 
 \documentclass{article}
+
 \usepackage{cite}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{subfig}
 
+% Page setup
+% Shamelessly stolen from Pat Morin's Open Data Structures
+%\setlength{\textheight}{8.5in}
+%\setlength{\textwidth}{6in}
+%\setlength{\topmargin}{-0.375in}
+%\setlength{\oddsidemargin}{.25in}
+%\setlength{\evensidemargin}{.25in}
+%\setlength{\headheight}{0.200in}
+%\setlength{\headsep}{0.4in}
+%\setlength{\footskip}{0.500in}
+\setlength{\parskip}{1.5ex}
+\setlength{\parindent}{1.25cm}
+%\flushbottom
+
 \begin{document}
-\maketitle
+%\maketitle
 
 \section{Background}
 
-In \cite{BeosWiki}, Haiku, yada, yada.  See figure \ref{fig:foo}.
+Haiku is a portable \cite{HaikuFaq} free and open source
+\cite{HaikuDevFaq} operating system for the 32-bit x86 architecture
+\cite{HaikuFaq} targeting personal computing \cite{HaikuAbout}.  It
+was originally named OpenBeOS after BeOS \cite{HaikuWiki}, the
+short-lived proprietary operating system developed by Be,
+Inc. throughout the 1990s, which focused on digital media work
+\cite{BeosWiki}.
 
-Also cite these guys: \cite{HaikuWiki}, \cite{HaikuAbout}, \cite{HaikuFaq}, \cite{HaikuHist}, \cite{HaikuContrib}, \cite{HaikuComm}, \cite{HaikuWelcome}, \cite{HaikuUserGuide}, \cite{HaikuHIG}, \cite{HaikuIcon}.
+BeOS boasted an object-oriented C++ API, a fully integrated graphical
+user environment, a modern multiprocessing, preemptively multitasking
+kernel, a journaling file system with a relational database-like
+metadata facility \cite{BFSWiki} and included partial POSIX
+compatibility.  However, despite having a devoted niche user base, it
+could not yield a profit for Be, Inc. and, in 2001, was acquired by
+Palm, Inc., ending further BeOS development \cite{BeosWiki}.
+
+Disapointed with the loss, a group of BeOS enthusiasts began an
+effort to rewrite BeOS as a free and open source project
+\cite{BeosWiki, HaikuHistoryWiki}.  In 2004 the open source effort was
+renamed Haiku, after the three line Japanese form of poetry which
+appeared on occasion in BeOS error messages \cite{HaikuFaq,
+  HaikuHistoryWiki}.
+
+Haiku takes its inspiration from BeOS \cite{HaikuAbout} and aims to
+recreate both the BeOS technologies and end user experience
+\cite{HaikuFaq}.  Haiku uses the same window decoration style and
+colour as BeOS \cite{HaikuWiki, BeosWiki} and aims to create a
+unified, cohesive user interface \cite{HaikuAbout, HaikuHIG,
+  HaikuIcon} reflecting the ``core qualities'' of ``elegance'' and
+``simplicity'' found in BeOS \cite{HaikuFaq}.  Haiku also directly
+incorporates two core BeOS user interface elements, the Tracker, a
+file manager, and the Deskbar, a taskbar, which were open sourced by
+Be, Inc. in 2001 \cite{HaikuFaq}.  Haiku also reimplements the
+object-oriented C++ BeOS API\cite{HaikuWiki} as well as the Be File
+System with, its advanced meta-data capabilities \cite{BFSWiki}.
+
+Haiku is targetted towards the personal computer user
+\cite{HaikuAbout}.  As such, it includes a fully integrated GUI
+environment, rejecting the stacked nature of the X Window System on
+UNIX-like operating systems \cite{HaikuFaq}.  The personal computing
+focus is also reflected in Haiku's current lack of support for
+multi-user operation, though are plans for such support in future
+releases \cite{HaikuFuture}.  Haiku also aims to present a unified
+human interface, both in terms of the operating system base as well as
+in applications developed for Haiku.  This is reflected in the
+development and maintenance of comprehensive Haiku human interface and
+icon guidelines \cite{HaikuHIG, HaikuIcon}.
+
+Haiku currently only supports the 32-bit x86 architecture, though
+ports to other platforms, including x86-64, are being developed and
+may be supported in the future \cite{HaikuFaq}.  On 32-bit x86, Haiku
+aims for full source and binary compatibility with 32-bit x86 BeOS
+applications.  Several major BeOS R5 applications already run
+successfully on Haiku, including Opera, Firefox and Quake III
+\cite{HaikuWiki}.  POSIX compatibility is also a Haiku goal
+\cite{HaikuFuture, HaikuIncContracts}, as are the development of a
+BSD-style ports collection \cite{HaikuPorts}, which would simplify the
+building of 3rd party open-source software and a full package
+management system to manage installation and dependency resolution of
+3rd party software \cite{HaikuR1A3Notes}.
+
+Haiku development is centred around the Haiku Project, an
+international community of volunteers \cite{HaikuAbout}.  The project
+maintains mailing lists, forums, IRC channels, \cite{HaikuComm} source
+code repositories \cite{HaikuGetSvn} and several websites, including
+the following:
+\begin{itemize}
+  \item \url{http://www.haiku-os.org/} -- the main project website
+  \item \url{http://api.haiku-os.org/} -- containing Haiku API documentation
+  \item \url{http://dev.haiku-os.org/} -- the Haiku project management
+    system
+  \item \url{http://www.haiku-files.org/} -- an archive of nightly
+    builds for Haiku
+  \item \url{http://ports.haiku-files.org/} -- the Haiku ports collection
+    project management system
+\end{itemize}
+
+There are 81 developers with commit access to the Haiku source code
+repository, with the top contributors ranking in the thousands of
+commits over many years (HaikuContrib).  The source code is revision
+controlled by an SVN repository and managed by Trac
+\cite{HaikuDevStart}.  Write access to the repository is granted to
+contributors on the basis of past contributions \cite{HaikuDevStart}.
+
+In addition to voluntary contributions, the Haiku Project has also
+participated in the Google Summer of Code (GSOC)---a program that
+provides stipends to students who contribute to open-source software
+\cite{GSOCWiki}---every year since 2007 \cite{HaikuGSOC}.  In 2010,
+Haiku took contributions from seven students through GSOC
+\cite{HaikuGSOC2010}.  Contributors are also sometimes contracted to
+work full-time on Haiku, allowing them to dedicate large continuous
+blocks of time to Haiku development \cite{HaikuIncContracts}.
+Contract lengths have mostly been limited to several weeks but also
+include a recently awarded six month contract
+\cite{HaikuLongContract}.
+
+The Haiku Project is supported financially by Haiku, Inc., a 501(c)(3)
+charitable non-profit corporation founded in 2003 by Michael Phipps in
+New York State's Division of Corporations \cite{HaikuIncAbout,
+  HaikuInc}.  Haiku, Inc., funded through donations, has a 2011
+operating budget of \$25,500 \cite{HaikuIncDocs}.  Donations to Haiku,
+Inc. come almost entirely from private individuals, either directly to
+Haiku, Inc. or through ``bounties'' and ``Thank You Awards'' from
+HaikuWare \cite{HaikuIncDonors, HaikuWareBounties}, a repository of
+pre-built software for Haiku as well as a hub for Haiku end-users
+\cite{HaikuWareAbout}.
+
+Haiku Release 1 Alpha 3 was published on June 20, 2011
+\cite{HaikuRelease}.  It is available for free download from various
+FTP and HTTP mirrors in the following formats \cite{HaikuGet}:
+\begin{itemize}
+\item ``Anyboot'' images -- which may be written to and booted from
+  USB flash drives, hard disk drives or CD/DVD media
+\item ISO images -- which may be written to CD media
+\item VMDK images -- which are virtual machine disk files compatible
+  with VMWare products as well as QEMU and VirtualBox \cite{VMDKWiki}
+\end{itemize}
+Any of the image formats may be used live, to try Haiku without the
+need for installation, or to install Haiku to another disk volume
+\cite{HaikuGet}.  The Haiku alpha release is also available for order
+on a ``commemorative'' CD from Haiku, Inc. for a minimum donation of
+\$10 per disc \cite{HaikuIncOrder}.  Source code for this release is also
+available for download in compressed archived form
+\cite{HaikuR1A3Src}.
+
+The latest Haiku source code can be obtained directly from the source
+code repository \cite{HaikuGetSvn} and nightly snapshot builds are
+available as downloadable images from the Haiku Files archive
+\cite{HaikuFiles}.
+
+The Haiku release (anyboot) is approximately 250MB in size compressed
+\cite{HaikuGet} and 700MB uncompressed.  The installed system also
+takes up about 700MB of disk space, not including the size of a swap
+file, which is 2GB by default.  The source distribution is split into
+two files.  One containing the Haiku build tools, comprised almost
+entirely of customized third party software (e.g. GCC, binutils) and
+having an uncompressed size of about 530MB, and the other containing
+the Haiku system sources proper and having approximately the same
+uncompressed size \cite{HaikuR1A3Src}.  The Haiku system sources
+contain about 5.5 million lines of C and C++ code and headers, not
+including blank or comment lines, as reported by CLOC \cite{Cloc}.
 
 \section{Installation and Startup}
+
+See figure \ref{fig:foo}.
 
 \begin{figure}[h]
 \centering
