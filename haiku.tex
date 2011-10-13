@@ -2,6 +2,8 @@
 \author{COMP 3000\\ \\Troy Hildebrandt -- 100622385\\Nima Hoda -- 100308135}
 \date{\today}
 
+
+
 \documentclass{article}
 
 \usepackage{cite}
@@ -178,21 +180,22 @@ For the purposes of testing, installation was performed on an Oracle
 VirtualBox setup, in this specific case using Windows 7 64bit host as
 a host OS.  The OS was set to Other/Unknown, and 512MB of memory was
 allotted for Haiku to use.  The default values of 2GB for boot disk
-size, and another 2GB for Haiku’s usable partition was selected as the
+size, and another 2GB for Haiku's usable partition was selected as the
 starting amount, with ``Dynamically expanding storage'' selected just
 in case.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/install-partition.png}
-\caption{XXX}
+\caption{Partition selection in the Haiku installer.}
 \label{fig:install-partition}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{figs/install-progress.png}
-\caption{XXX}
+\caption{The Haiku installer copying files and displaying installation
+  progress.}
 \label{fig:install-progress}
 \end{figure}
 
@@ -213,7 +216,7 @@ first time.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{figs/startup.png}
-\caption{XXX}
+\caption{The Haiku boot screen.}
 \label{fig:startup}
 \end{figure}
 
@@ -221,10 +224,10 @@ The first start-up presents the user with a screen showing the Haiku
 logo, and a series of logos that go from monochrome to full color in
 sequence to indicate progress during boot-up (\figref{startup}).
 Given this execution combined with the artistic styling of the logos,
-this is very reminiscent of Maxis’ The Sims series of games.
+this is very reminiscent of Maxis' The Sims series of games.
 
 After what is a noticeably rapid boot process, users familiar with
-Haiku’s inspiration and spiritual predecessor, BeOS, will be instantly
+Haiku's inspiration and spiritual predecessor, BeOS, will be instantly
 greeted with both familiar desktop and icon styling along with the
 Tracker, one of very few things that made a direct translation from
 BeOS to Haiku as part of being open-sourced in 2001 \cite{HaikuFaq}.
@@ -253,23 +256,24 @@ recognizes solved the problem immediately.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/using-quake-download.png}
-\caption{XXX}
+\caption{WebPositive, the Haiku web browser, downloading Quake II from
+  Haikuware.}
 \label{fig:using-quake-download}
 \end{figure}
 
 A user looking to expand their selection of installed software will
-likely end up at the site Haikuware \cite{HaikuWare}.  Considering my
-resounding disinterest in word-processing or productivity programs, I
-decided to hunt down a Haiku-compatible version of a classic favourite
-of mine, id Software’s Quake II(\figref{using-quake-download}).
-Interestingly enough, the claim from the download page at Haikuware
-for Quake II claims it is the same version that used to be found on
-BeDepot.
+likely end up at the site Haikuware (located at
+http://www.haikuware.com).  Considering my resounding disinterest in
+word-processing or productivity programs, I decided to hunt down a
+Haiku-compatible version of a classic favourite of mine, id Software's
+Quake II(\figref{using-quake-download}).  Interestingly enough, the
+claim from the download page at Haikuware for Quake II claims it is
+the same version that used to be found on BeDepot.
 	
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/using-terminal.png}
-\caption{XXX}
+\caption{A Bash terminal window open in Haiku.}
 \label{fig:using-terminal}
 \end{figure}
 
@@ -289,7 +293,7 @@ the installation of BeOS Quake II at /boot/apps/Quake2.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{figs/using-quake-play.png}
-\caption{XXX}
+\caption{Quake II for BeOS running on Haiku.}
 \label{fig:using-quake-play}
 \end{figure}
 	
@@ -303,9 +307,9 @@ and no virtualized OpenGL 3D-acceleration, and as a result, I switched
 to pure software rendering mode which ended up working out nicely
 (\figref{using-quake-play}).  However, attempting to start a game
 causes a crash, and while playing the beginning demo the game will
-occasionally crash as well.  I’m not sure if this is a result of it
-being a BeOS executable, the fact that I’m running it in VirtualBox,
-or just that the BeOS/Haiku executable of Quake II isn’t quite ready
+occasionally crash as well.  I'm not sure if this is a result of it
+being a BeOS executable, the fact that I'm running it in VirtualBox,
+or just that the BeOS/Haiku executable of Quake II isn't quite ready
 for prime time yet.  I was nevertheless still impressed to see it
 running in any capacity in Haiku.
 	
@@ -319,15 +323,15 @@ installation of new software like a web browser?''  I soon discovered
 the answer is ``not very.''
 
 There is a small selection of browsers available for Haiku directly
-from Haikuware, but they’re mostly old versions of browsers
-(i.e. Firefox 2.0 since Firefox 3 still isn’t fully ported, as well as
-older versions of Opera) that still don’t have proper plugin support
+from Haikuware, but they're mostly old versions of browsers
+(i.e. Firefox 2.0 since Firefox 3 still isn't fully ported, as well as
+older versions of Opera) that still don't have proper plugin support
 for things like Flash.  Since Flash is closed-source, open-source
 versions of it like Gnash are made, but are still largely unsupported
 and not optimal.  This makes something like watching Youtube a more
 massive undertaking than most basic users will be capable of, since
 getting Flash support in a web browser in Haiku is a task in itself.
-This speaks poorly to Haiku’s goal to be for ``personal computing,''
+This speaks poorly to Haiku's goal to be for ``personal computing,''
 considering how many more popular operating systems provide this basic
 functionality.
 
@@ -338,10 +342,10 @@ impressive piece of work in its own right, Haiku falls short of its
 goals to be for ``personal computing'' by simply not having enough
 software support and lacking in the excellent package distribution
 models that many other more popular operating systems provide.  An
-interesting OS, and considering it’s open source model could
+interesting OS, and considering it's open source model could
 technically be made to do anything if you felt so inclined, but the
 types of users who would delve into source code to coax Haiku into
-being more useful aren’t the sort of people I feel the Haiku
+being more useful aren't the sort of people I feel the Haiku
 developers are speaking to when they describe it vaguely as being for
 ``personal computing.''
 
