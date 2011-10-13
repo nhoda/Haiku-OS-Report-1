@@ -1,3 +1,10 @@
+Website bibliographic entries:
+
+-author
+-link
+-page title
+-when accessed
+
 Background:
 * The name of the distribution
 ** Haiku, originally named OpenBeOS (HaikuWiki)
