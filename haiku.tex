@@ -179,9 +179,8 @@ including blank or comment lines, as reported by CLOC \cite{Cloc}.
 For the purposes of testing, installation was performed on an Oracle
 VirtualBox setup, in this specific case using Windows 7 64bit host as
 a host OS.  The OS was set to Other/Unknown, and 512MB of memory was
-allotted for Haiku to use.  The default values of 2GB for boot disk
-size, and another 2GB for Haiku's usable partition was selected as the
-starting amount, with ``Dynamically expanding storage'' selected just
+allotted for Haiku to use. 4GB was the amount of hard-disk space I chose
+to allow Haiku to use, and ``Dynamically expanding storage'' was selected just
 in case.
 
 \begin{figure}[h]
@@ -226,15 +225,15 @@ sequence to indicate progress during boot-up (\figref{startup}).
 Given this execution combined with the artistic styling of the logos,
 this is very reminiscent of Maxis' The Sims series of games.
 
-After what is a noticeably rapid boot process, users familiar with
-Haiku's inspiration and spiritual predecessor, BeOS, will be instantly
-greeted with both familiar desktop and icon styling along with the
+After a noticeably rapid boot process, users familiar with
+Haiku's inspiration and spiritual predecessor, BeOS, will be greeted 
+instantly with both familiar desktop and icon styling along with the
 Tracker, one of very few things that made a direct translation from
 BeOS to Haiku as part of being open-sourced in 2001 \cite{HaikuFaq}.
 
-There is also a very profound lack of any further setup involved, and
-Haiku is, for all intents and purposes, ready for use.  The time taken
-from start to finish in setting up an installation of Haiku under
+A stark install process gives way to very few options, and with very little
+additional effort, Haiku is for all intents and purposes ready for use.  
+The time taken from start to finish in setting up an installation of Haiku under
 VirtualBox is roughly five minutes.
 
 \section{Basic Operation}
@@ -242,16 +241,16 @@ VirtualBox is roughly five minutes.
 Haiku comes pre-installed with a host of applications that the average
 user may use, the most important of which is likely its pre-installed
 browser, titled WebPositive.  Haiku is aimed at ``personal
-computing,'' and given this vague definition, seems to fulfill the
-needs of an average light user ``out of the box.'' The web browser
-will be the obvious first stop for most users looking to get more
-software and make their Haiku experience a more productive one.
+computing,'' and given this vague definition, seems at first glance to fulfill 
+the needs of an average light user. The web browser will be the obvious first 
+stop for most users looking to get more software and make their Haiku experience 
+a more entertaining or productive one.
 	
 This is where the first very minor problem was encountered, and it was
-a network related issue.  Haiku refused to recognize the default
+a network related issue. Haiku refused to recognize the default
 network card that VirtualBox had chosen to virtualize, and so a quick
-shutdown and modification of this setting to a card that Haiku
-recognizes solved the problem immediately.
+shutdown and modification of this setting to an Intel Pro/1000 MT desktop card 
+solved the problem immediately.
 	
 \begin{figure}[h]
 \centering
@@ -277,13 +276,15 @@ the same version that used to be found on BeDepot.
 \label{fig:using-terminal}
 \end{figure}
 
-Following my download's completion, I noticed it was of the file
-format .  pkg.  A double click revealed a very simple auto-install
-package that I allowed to install to its default directory,
+Following the download's completion, the most obvious feature was
+its file extension, .PKG. Not recognizing this immediately as a BeOS
+installation package, a double click revealed a very simple auto-install
+process that I promptly allowed to install to its default directory,
 /boot/apps.  The file system in BeOS/Haiku is very similar to that of
-a Unix OS, despite Haiku not being a Unix based operating system.
-Haiku also comes with a Bash terminal, with the usual commands like
-ls, chmod, pwd, and many others (\figref{using-terminal}).  The
+a Unix OS, despite Haiku not being a Unix based operating system, and as
+such the directory structure looks very similar to Unix systems.
+Haiku comes with a Bash terminal, with instantly recognizable Unix commands
+such as ls, chmod, pwd, and many others (\figref{using-terminal}).  The
 mounting of a CD is automatic, and very easily accessible once
 inserted, either from a link on the desktop, or from the root
 directory, based on what the name of the CD is.  In this case, I could
@@ -299,7 +300,11 @@ the installation of BeOS Quake II at /boot/apps/Quake2.
 	
 After copying the contents of a full Windows installation of Quake II
 into Haiku via USB drive (which again was instantly recognized and
-mounted), I started it up.  The first noticeable problems were both
+mounted), I started it up. Copying from a previously installed Windows
+version was necessary because the CD was the Windows version, and availability
+of a native BeOS installer is unlikely. 
+
+The first noticeable problems were both
 the obviously broken and ear-piercing sound which caused me to mute my
 PC, and the excruciatingly slow Mesa software OpenGL implementation
 that the game defaulted to.  This is a result of no Guest Additions
@@ -318,9 +323,11 @@ least some Flash-based video website.  If Haiku was going to be of any
 use to the average personal computer user, I was going to need to
 determine whether or not Youtube was a viable option in Haiku.  I set
 about trying to download a new browser from Haikuware to spruce up my
-browsing experience, and to answer the question ``how simple is the
-installation of new software like a web browser?''  I soon discovered
-the answer is ``not very.''
+browsing experience, and to find out how simple the installation of new
+software would be. The unfortunate discovery was that there is a high
+degree of difficulty finding and installing new software in Haiku, partly
+due to the tiny number of apps available to it that both run natively,
+and are easy to install.
 
 There is a small selection of browsers available for Haiku directly
 from Haikuware, but they're mostly old versions of browsers
